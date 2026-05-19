@@ -13,6 +13,14 @@ The `.pkg` installer installs the app into `/Applications`.
 
 The `.dmg` file lets users drag `Copy With Creation Date.app` into Applications manually.
 
+If macOS says the app is damaged or cannot be opened, it is because this free release is not notarized by Apple. After downloading, open Terminal and run:
+
+```sh
+xattr -dr com.apple.quarantine "/Applications/Copy With Creation Date.app"
+```
+
+Then open the app again from Applications.
+
 Copy With Creation Date is a small native macOS app for copying image files while preserving their original **Date Created** and **Date Modified** timestamps.
 
 It solves a common Finder copy/paste problem: when images are copied in some workflows, the visible creation date can change to the copy time. This app copies the files and then explicitly restores the original timestamp metadata on the copied files.
@@ -169,4 +177,4 @@ The core behavior is tested in `Tests/CopyWithCreationDateTests/CopyEngineTests.
 - The app is intended for image files.
 - Existing files are not overwritten.
 - The generated `.dmg` and `.pkg` files in `dist/` are included for distribution.
-- This project is currently unsigned. If macOS Gatekeeper warns when opening the app, right-click the app and choose **Open**.
+- This project is ad-hoc signed but not Apple-notarized. Some Macs may require removing the download quarantine attribute before opening the app.

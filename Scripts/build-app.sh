@@ -49,4 +49,7 @@ cat > "$APP_DIR/Contents/Info.plist" <<PLIST
 </plist>
 PLIST
 
+xattr -cr "$APP_DIR"
+codesign --force --deep --sign - "$APP_DIR"
+
 echo "Built $APP_DIR"
