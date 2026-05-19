@@ -40,7 +40,16 @@ xcode-select --install
 
 ## Installation
 
-Clone the repository:
+Download one of the distribution files from this repository:
+
+- `dist/Copy With Creation Date.dmg`
+- `dist/Copy With Creation Date Installer.pkg`
+
+The `.pkg` installer installs the app into `/Applications`.
+
+The `.dmg` file lets users drag `Copy With Creation Date.app` into Applications manually.
+
+To build from source instead, clone the repository:
 
 ```sh
 git clone <repository-url>
@@ -157,5 +166,5 @@ The core behavior is tested in `Tests/CopyWithCreationDateTests/CopyEngineTests.
 
 - The app is intended for image files.
 - Existing files are not overwritten.
-- The generated `dist/` folder is ignored by Git because it is build output.
+- The generated `.dmg` and `.pkg` files in `dist/` are included for distribution.
 - This project is currently unsigned. If macOS Gatekeeper warns when opening the app, right-click the app and choose **Open**.
