@@ -2,6 +2,17 @@
 
 By Ramiro Montes De Oca
 
+## Download
+
+Use one of these ready-to-install distribution packages:
+
+- [Download the DMG](dist/Copy%20With%20Creation%20Date.dmg)
+- [Download the PKG Installer](dist/Copy%20With%20Creation%20Date%20Installer.pkg)
+
+The `.pkg` installer installs the app into `/Applications`.
+
+The `.dmg` file lets users drag `Copy With Creation Date.app` into Applications manually.
+
 Copy With Creation Date is a small native macOS app for copying image files while preserving their original **Date Created** and **Date Modified** timestamps.
 
 It solves a common Finder copy/paste problem: when images are copied in some workflows, the visible creation date can change to the copy time. This app copies the files and then explicitly restores the original timestamp metadata on the copied files.
@@ -40,16 +51,7 @@ xcode-select --install
 
 ## Installation
 
-Download one of the distribution files from this repository:
-
-- `dist/Copy With Creation Date.dmg`
-- `dist/Copy With Creation Date Installer.pkg`
-
-The `.pkg` installer installs the app into `/Applications`.
-
-The `.dmg` file lets users drag `Copy With Creation Date.app` into Applications manually.
-
-To build from source instead, clone the repository:
+To build from source, clone the repository:
 
 ```sh
 git clone <repository-url>
